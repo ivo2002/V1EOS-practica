@@ -33,8 +33,7 @@ if __name__ == "__main__":
 
     if (len(sys.argv) != 2):
         sys.exit("Need a secret number")
-    secret_number = int(hashlib.md5(sys.argv[1].encode()).hexdigest(), 16)
-    print(secret_number)
+    secret_number = int(hashlib.md5(sys.argv[1].lower().encode()).hexdigest(), 16)
 
     result = ""
     try:
